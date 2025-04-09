@@ -482,6 +482,45 @@ case object Board4Mixup1 extends BaseBoard {
 
 }
 
+case object Board4Mixup2 extends BaseBoard {
+    val name = "4 Players / Mix Up 2"
+    val clusters = $(1, 2, 3, 5, 6)
+
+    val starting : $[(System, System, $[System])] = $(
+        (System(5, Hex), System(3, Arrow), $(System(2, Gate))),
+        (System(3, Hex), System(5, Crescent), $(System(1, Gate))),
+        (System(2, Hex), System(1, Hex), $(System(3, Gate))),
+        (System(1, Arrow), System(2, Arrow), $(System(5, Gate))),
+    )
+
+}
+
+case object Board4Frontiers extends BaseBoard {
+    val name = "4 Players / Frontiers"
+    val clusters = $(1, 2, 3, 4, 6)
+
+    val starting : $[(System, System, $[System])] = $(
+        (System(1, Hex), System(3, Crescent), $(System(2, Gate))),
+        (System(2, Hex), System(6, Hex), $(System(3, Gate))),
+        (System(4, Crescent), System(2, Arrow), $(System(6, Gate))),
+        (System(1, Arrow), System(6, Arrow), $(System(4, Gate))),
+    )
+
+}
+
+case object Board4FMixup3 extends BaseBoard {
+    val name = "4 Players / Mix Up 3"
+    val clusters = $(1, 2, 3, 4, 5)
+
+    val starting : $[(System, System, $[System])] = $(
+        (System(3, Hex), System(5, Crescent), $(System(1, Gate))),
+        (System(1, Arrow), System(3, Arrow), $(System(2, Gate))),
+        (System(1, Hex), System(4, Hex), $(System(3, Gate))),
+        (System(4, Arrow), System(2, Crescent), $(System(5, Gate))),
+    )
+
+}
+
 case object Board3Frontiers extends BaseBoard {
     val name = "3 Players / Frontiers"
     val clusters = $(1, 4, 5, 6)
@@ -490,6 +529,42 @@ case object Board3Frontiers extends BaseBoard {
         (System(1, Hex), System(4, Hex), $(System(6, Gate))),
         (System(5, Hex), System(1, Crescent), $(System(5, Gate))),
         (System(4, Crescent), System(6, Arrow), $(System(1, Gate))),
+    )
+
+}
+
+case object Board3Mixup extends BaseBoard {
+    val name = "3 Players / Mix Up"
+    val clusters = $(2, 3, 5, 6)
+
+    val starting : $[(System, System, $[System])] = $(
+        (System(3, Hex), System(5, Crescent), $(System(2, Gate))),
+        (System(5, Hex), System(2, Arrow), $(System(3, Gate))),
+        (System(2, Hex), System(3, Arrow), $(System(5, Gate))),
+    )
+
+}
+
+case object Board3Homelands extends BaseBoard {
+    val name = "3 Players / Homelands"
+    val clusters = $(1, 2, 3, 4)
+
+    val starting : $[(System, System, $[System])] = $(
+        (System(2, Hex), System(3, Crescent), $(System(3, Gate))),
+        (System(1, Hex), System(4, Hex), $(System(2, Gate))),
+        (System(1, Arrow), System(2, Arrow), $(System(4, Gate))),
+    )
+
+}
+
+case object Board3CoreConflict extends BaseBoard {
+    val name = "3 Players / Core Conflict"
+    val clusters = $(1, 2, 4, 5)
+
+    val starting : $[(System, System, $[System])] = $(
+        (System(1, Hex), System(2, Crescent), $(System(1, Gate))),
+        (System(2, Hex), System(1, Crescent), $(System(2, Gate))),
+        (System(1, Arrow), System(2, Arrow), $(System(4, Gate))),
     )
 
 }
